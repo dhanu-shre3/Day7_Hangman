@@ -10,8 +10,12 @@ word_list = ["aardvark", "baboon", "camel"]
 
 chosen_word = random.choice(word_list)
 
-guess = (input("Guess the word"))
-guess = guess.lower()
+guess = input("Guess the letter: ").lower()
 
-for letter in guess:
-    
+
+
+for letter in chosen_word:
+    if letter == guess:
+        print("Right")
+    else:
+        print("Wrong")    
