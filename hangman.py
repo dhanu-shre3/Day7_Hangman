@@ -20,7 +20,6 @@ from hangman_art import logo, stages
 print(logo)
 #step 2
 #Testing code
-print(f'Pssst, the solution is {chosen_word}.')
 
 #TODO-4: - Create an empty List called display.
 #For each letter in the chosen_word, add a "_" to 'display'.
@@ -58,12 +57,17 @@ while not end_of_game:
         if lives == 0:
             end_of_game = True
             print("You lose")
+            print(f'Pssst, the solution is {chosen_word}.')
+
         
     
 #Check if user has got all letters.
     if "_" not in display:
         end_of_game = True
         print("You win")
+        print(f'Pssst, the solution is {chosen_word}.')
+
+
 
     print(stages[lives])
 
